@@ -1,4 +1,10 @@
 # Marlin 3D Printer Firmware
+
+## LK4 Pro BLTouch Firmware
+This is a modified version of LONGER3D/LKxPro-Marlin1.1.9, for the LK4 Pro with configuration.h modified to enable BLTouch support.
+
+The X and Y offsets are set for this mounting bracket: https://www.thingiverse.com/thing:4584449. You will need to change these if you mount the sensor differently.
+
 ## NOTE
 
 This firmware was modified by Longer3D. It was based on Marlin 1.1.9 and applies to Longer LKxPro series(same apply to Ux0 Pro series). It set to "LK4 Pro" printer by default. If you want to change to other model, you need unremark related model definition(like "LK5_Pro") in Configuration.h.
