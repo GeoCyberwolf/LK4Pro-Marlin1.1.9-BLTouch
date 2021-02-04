@@ -128,7 +128,7 @@
 				#ifdef LK1_Pro
 					#define LK1_Pro_AutoBed
 				#else
-        // #define LK4_Pro_BLTOUCH
+        #define LK4_Pro_BLTOUCH
         #ifdef LK5_Pro
           #define LK4_Pro
         #endif
@@ -565,7 +565,7 @@
   //#define ENDSTOPPULLUP_XMIN
   //#define ENDSTOPPULLUP_YMIN
   //#define ENDSTOPPULLUP_ZMIN
-  //#define ENDSTOPPULLUP_ZMIN_PROBE
+  #define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
 //#if ENABLED (LK1_Pro_AutoBed)
 //	#if ENABLED ( ENDSTOPPULLUPS)
@@ -588,7 +588,7 @@
 #define X_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // set to true to invert the logic of the probe.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // set to true to invert the logic of the probe.
 
 /**
  * Stepper Drivers
@@ -842,8 +842,8 @@
 	#define Y_PROBE_OFFSET_FROM_EXTRUDER -3//0 // Y offset: -front +behind [the nozzle]
 	#define Z_PROBE_OFFSET_FROM_EXTRUDER 0 //0  // Z offset: -below +above  [the nozzle]
 #elif ENABLED(LK4_Pro_BLTOUCH) 
-	#define X_PROBE_OFFSET_FROM_EXTRUDER -36 // X offset: -left  +right  [of the nozzle]
-	#define Y_PROBE_OFFSET_FROM_EXTRUDER -4 // Y offset: -front +behind [the nozzle]
+	#define X_PROBE_OFFSET_FROM_EXTRUDER -40 // X offset: -left  +right  [of the nozzle]
+	#define Y_PROBE_OFFSET_FROM_EXTRUDER -9 // Y offset: -front +behind [the nozzle]
 	#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.4 // Z offset: -below +above  [the nozzle]
 #endif // LK1_Pro_AutoBed
 
@@ -890,7 +890,7 @@
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
 // Enable the M48 repeatability test to test probe accuracy
-//#define Z_MIN_PROBE_REPEATABILITY_TEST
+#define Z_MIN_PROBE_REPEATABILITY_TEST
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
 // :{ 0:'Low', 1:'High' }
@@ -1075,7 +1075,7 @@
  * Normally G28 leaves leveling disabled on completion. Enable
  * this option to have G28 restore the prior leveling state.
  */
-//#define RESTORE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
@@ -1113,7 +1113,7 @@
 
   // Set the number of grid points per dimension.
 #if ENABLED (LK1_Pro_AutoBed)||ENABLED(LK4_Pro_BLTOUCH)
-	#define GRID_MAX_POINTS_X 4
+	#define GRID_MAX_POINTS_X 5
 #else
 	//#define GRID_MAX_POINTS_X 3
 #endif
